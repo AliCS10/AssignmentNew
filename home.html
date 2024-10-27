@@ -5,35 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        /* Reset */
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
+
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f4f4f9;
+        }
+
+        /* Header */
         header {
-            background: hsl(241, 99%, 27%);
-            color: rgb(190, 19, 19);
-            padding: 10px 0;
+            background: linear-gradient(45deg, #1a73e8, #4285f4);
+            color: #fff;
+            padding: 20px;
             text-align: center;
         }
+        header h1 {
+            font-size: 2em;
+        }
+
+        /* Navigation */
         nav {
             display: flex;
-            justify-content: space-around;
-            background: #690d0d;
+            justify-content: center;
+            background: #333;
+            padding: 10px;
         }
         nav a {
-            color: rgb(0, 221, 210);
-            padding: 14px 20px;
+            color: #fff;
+            padding: 10px 20px;
             text-decoration: none;
-            text-align: center;
+            margin: 0 5px;
+            transition: background 0.3s, color 0.3s;
         }
         nav a:hover {
-            background: #1a1166;
-            color: black;
+            background: #1a73e8;
+            color: #fff;
         }
+
+        /* Main Section */
         section {
+            max-width: 1200px;
+            margin: 20px auto;
             padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
+        section h2 {
+            font-size: 1.8em;
+            color: #1a73e8;
+            margin-bottom: 10px;
+        }
+        section p {
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        /* Table */
         table {
             width: 100%;
             border-collapse: collapse;
@@ -41,21 +77,28 @@
         }
         table, th, td {
             border: 1px solid #ddd;
-            padding: 8px;
+            padding: 10px;
         }
         th {
-            background-color: #4CAF50;
+            background-color: #4285f4;
             color: white;
         }
+
+        /* Footer */
         footer {
             text-align: center;
-            padding: 10px 0;
+            padding: 15px 0;
             background: #333;
-            color: white;
+            color: #fff;
         }
-        @media (max-width: 600px) {
+
+        /* Responsive */
+        @media (max-width: 768px) {
             nav {
                 flex-direction: column;
+            }
+            nav a {
+                margin: 5px 0;
             }
         }
     </style>
@@ -68,17 +111,39 @@
 
 
 <nav>
-    <a href="home.html">Home</a>
-    <a href="abouAS.html">About Us</a> <!-- يوجه إلى صفحة الاتصال -->
-    <a href="course.html">Courses</a>
-    <a href="OurSchool.html">Our School</a>
-    <a href="contact.html">Contact</a> <!-- يوجه إلى صفحة Our School -->
+    <a href="home.html">🏠 Home</a>
+    <a href="abouAS.html">ℹ️ About Us</a> 
+    <a href="course.html">📚 Courses</a>
+    <a href="OurSchool.html">🏫 Our School</a>
+    <a href="contact.html">📞 Contact</a>
 </nav>
+
 
 <section>
     <h2>Home Page</h2>
-    <p>Ali Abdullah Al habib</p>
+    <p>Welcome to our platform where we offer a variety of resources and tools to enhance your learning experience. Explore our courses, learn more about our school, and feel free to reach out to us!</p>
+    <table>
+        <tr>
+            <th>Course</th>
+            <th>Description</th>
+            <th>Duration</th>
+        </tr>
+        <tr>
+            <td>Web Development</td>
+            <td>Learn the fundamentals of web design and development.</td>
+            <td>10 weeks</td>
+        </tr>
+        <tr>
+            <td>Data Science</td>
+            <td>Explore data analysis, machine learning, and AI.</td>
+            <td>12 weeks</td>
+        </tr>
+    </table>
 </section>
+
+<footer>
+    <p>&copy; 2024 Our Website. All rights reserved.</p>
+</footer>
 
 </body>
 </html>

@@ -3,35 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Ali Abdullah Al Habib</title>
     <style>
-        /* Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        /* Global Styles */
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: #f4f4f9;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            background: linear-gradient(135deg, #4a00e0, #8e2de2);
+            color: white;
         }
-
-        /* Header */
         header {
-            background: linear-gradient(45deg, #1a73e8, #4285f4);
-            color: #fff;
-            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px;
             text-align: center;
         }
-        header h1 {
-            font-size: 2em;
-        }
-
-        /* Navigation */
         nav {
             display: flex;
             justify-content: center;
@@ -39,111 +23,96 @@
             padding: 10px;
         }
         nav a {
-            color: #fff;
-            padding: 10px 20px;
+            color: white;
+            padding: 14px 20px;
             text-decoration: none;
-            margin: 0 5px;
-            transition: background 0.3s, color 0.3s;
+            text-align: center;
+            font-size: 1.2em; /* تكبير حجم الخط */
+            transition: color 0.3s, text-shadow 0.3s; /* إضافة تأثير عند المرور */
         }
         nav a:hover {
-            background: #1a73e8;
-            color: #fff;
+            color: #ffafbd; /* تغيير لون النص عند المرور */
+            text-shadow: 0 0 5px #ffc3a0, 0 0 10px #ffafbd; /* إضافة ظل للنص */
         }
-
-        /* Main Section */
-        section {
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 20px;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh - 80px); /* توازن المساحة بين رأس الصفحة والتذييل */
         }
-        section h2 {
-            font-size: 1.8em;
-            color: #1a73e8;
-            margin-bottom: 10px;
+        h1 {
+            font-size: 4em;
+            font-weight: 700;
+            background: linear-gradient(90deg, #ffafbd, #ffc3a0);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+            animation: glow 2s ease-in-out infinite alternate;
         }
-        section p {
-            font-size: 1.1em;
-            color: #555;
+        h2 {
+            font-size: 3em;
+            font-weight: 700;
+            background: linear-gradient(90deg, #00c6ff, #0072ff); /* تأثير اللون المميز */
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+            animation: glow 2s ease-in-out infinite alternate;
         }
-
-        /* Table */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-        table, th, td {
-            border: 1px solid #ddd;
-            padding: 10px;
-        }
-        th {
-            background-color: #4285f4;
-            color: white;
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 15px 0;
-            background: #333;
-            color: #fff;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            nav {
-                flex-direction: column;
+        @keyframes glow {
+            from {
+                text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.3);
             }
-            nav a {
-                margin: 5px 0;
+            to {
+                text-shadow: 2px 2px 20px rgba(255, 255, 255, 0.7);
             }
         }
     </style>
 </head>
 <body>
+    <header>
+        <h1>Home</h1> <!-- إضافة كلمة Home مع التأثير -->
+    </header>
+    <nav>
+        <a href="home.html">🏠 Home</a>
+        <a href="abouAS.html">ℹ️ About Us</a> 
+        <a href="course.html">📚 Courses</a>
+        <a href="OurSchool.html">🏫 Our School</a>
+        <a href="contact.html">📞 Contact</a>
+    </nav>
+    <main>
+        <section id="home">
+            <h2>My Name: Ali Abdullah Al Habib</h2> <!-- إضافة تأثير للعنوان -->
+        </section>
+        <section id="about" style="display: none;">
+            <h2>About Me</h2>
+            <p>I'm Ali Abdullah Al Habib, a passionate learner and developer.</p>
+        </section>
+        <section id="courses" style="display: none;">
+            <h2>Courses</h2>
+            <p>I offer various courses in programming and web development.</p>
+        </section>
+        <section id="contact" style="display: none;">
+            <h2>Contact Me</h2>
+            <p>Email: ali.abdullah@gmail.com</p>
+        </section>
+    </main>
 
-<header>
-    <h1>Welcome to Our Website</h1>
-</header>
+    <script>
+        const links = document.querySelectorAll('nav a');
+        const sections = document.querySelectorAll('main section');
 
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                sections.forEach(section => section.style.display = 'none');
+                const target = link.getAttribute('href').substring(1);
+                document.getElementById(target).style.display = 'block';
+            });
+        });
 
-<nav>
-    <a href="home.html">🏠 Home</a>
-    <a href="abouAS.html">ℹ️ About Us</a> 
-    <a href="course.html">📚 Courses</a>
-    <a href="OurSchool.html">🏫 Our School</a>
-    <a href="contact.html">📞 Contact</a>
-</nav>
-
-
-<section>
-    <h2>Home Page</h2>
-    <p>Welcome to our platform where we offer a variety of resources and tools to enhance your learning experience. Explore our courses, learn more about our school, and feel free to reach out to us!</p>
-    <table>
-        <tr>
-            <th>Course</th>
-            <th>Description</th>
-            <th>Duration</th>
-        </tr>
-        <tr>
-            <td>Web Development</td>
-            <td>Learn the fundamentals of web design and development.</td>
-            <td>10 weeks</td>
-        </tr>
-        <tr>
-            <td>Data Science</td>
-            <td>Explore data analysis, machine learning, and AI.</td>
-            <td>12 weeks</td>
-        </tr>
-    </table>
-</section>
-
-<footer>
-    <p>&copy; 2024 Our Website. All rights reserved.</p>
-</footer>
-
+        // Show the home section by default
+        document.getElementById('home').style.display = 'block';
+    </script>
 </body>
 </html>

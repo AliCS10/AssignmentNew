@@ -5,57 +5,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our School</title>
     <style>
+        /* Global Styles */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            color: #333;
         }
+
+        /* Header */
         header {
             background: hsl(241, 99%, 27%);
             color: rgb(190, 19, 19);
-            padding: 10px 0;
+            padding: 20px;
             text-align: center;
         }
+
+        /* Navigation */
         nav {
             display: flex;
-            justify-content: space-around;
+            justify-content: center;
             background: #690d0d;
+            padding: 10px 0;
         }
         nav a {
             color: rgb(0, 221, 210);
-            padding: 14px 20px;
+            padding: 10px 20px;
             text-decoration: none;
             text-align: center;
+            transition: background 0.3s, color 0.3s;
         }
         nav a:hover {
             background: #1a1166;
-            color: black;
+            color: #fff;
         }
+
+        /* Section */
         section {
             padding: 20px;
+            max-width: 800px;
+            margin: auto;
         }
+        section h2 {
+            font-size: 1.8em;
+            color: #4CAF50;
+            margin-bottom: 10px;
+        }
+
+        /* Table */
         table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 20px;
+            background-color: #f9f9f9;
         }
         table, th, td {
             border: 1px solid #ddd;
-            padding: 8px;
+            padding: 12px;
+            text-align: center;
         }
         th {
             background-color: #4CAF50;
             color: white;
         }
+
+        /* Footer */
         footer {
             text-align: center;
-            padding: 10px 0;
+            padding: 15px 0;
             background: #333;
             color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
         }
+
+        /* Responsive */
         @media (max-width: 600px) {
             nav {
                 flex-direction: column;
+            }
+            nav a {
+                padding: 8px;
+                margin: 5px 0;
             }
         }
     </style>
@@ -67,12 +99,13 @@
 </header>
 
 
+
 <nav>
-    <a href="home.html">Home</a>
-    <a href="abouAS.html">About Us</a> <!-- يوجه إلى صفحة الاتصال -->
-    <a href="course.html">Courses</a>
-    <a href="OurSchool.html">Our School</a>
-    <a href="contact.html">Contact</a> <!-- يوجه إلى صفحة Our School -->
+    <a href="home.html">🏠 Home</a>
+    <a href="abouAS.html">ℹ️ About Us</a> 
+    <a href="course.html">📚 Courses</a>
+    <a href="OurSchool.html">🏫 Our School</a>
+    <a href="contact.html">📞 Contact</a>
 </nav>
 <section>
     <h2>School Schedule</h2>
@@ -112,5 +145,10 @@
     </table>
 </section>
 
+<footer>
+    <p>&copy; 2024 Our Website. All rights reserved.</p>
+</footer>
+
 </body>
 </html>
+
